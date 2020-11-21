@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+group 'com.bassplayer.ai'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+mainClassName=""
+applicationDefaultJvmArgs = [
+        "-Xms200m",
+        "-Xmx4000m",
+        "-Dsun.net.inetaddr.ttl=-1",
+        "-Djava.net.preferIPv4Stack=true",
+        "-Dlog4j.configurationFile=log4j2.xml",
+        "-Dlog4j.skipJansi=false",
+        "-Dfile.encoding=UTF8",
+        "-Djdk.http.auth.tunneling.disabledSchemes=\"\""
+]
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+
+    // Google Guava
+    compile 'com.google.guava:guava:25.1-jre'
+
+    //SLF4J
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+
+    // Log4J
+    compile 'org.apache.logging.log4j:log4j-api:2.10.0'
+    compile 'org.apache.logging.log4j:log4j-core:2.10.0'
+
+
+    // https://sparkjava.com/
+    compile 'com.sparkjava:spark-core:2.9.3'
+}

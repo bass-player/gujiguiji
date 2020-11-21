@@ -1,0 +1,5 @@
+2020-11-21 17:17:29.806 INFO  [qtp1480723292-22] [SparkRestExample:20] lambda$main$0 - Receive api call
+2020-11-21 17:18:06.050 INFO  [qtp1480723292-16] [SparkRestExample:20] lambda$main$0 - Receive api call
+2020-11-21 17:19:08.125 INFO  [qtp1480723292-22] [SparkRestExample:20] lambda$main$0 - Receive api call
+2020-11-21 17:19:11.935 INFO  [qtp1480723292-17] [SparkRestExample:20] lambda$main$0 - Receive api call
+2020-11-21 17:19:20.086 INFO  [qtp1480723292-16] [SparkRestExample:20] lambda$main$0 - Receive api call
